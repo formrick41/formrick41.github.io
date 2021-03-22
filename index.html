@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formulario</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
     <!-- Forma para procesar datos.
@@ -17,7 +17,7 @@
     sobre un element de type="submit" dentro de la forma, o cuando se teclea
     enter con el foco en un componente de captura de texto que esté dentro de
     la forma. -->
-    <form action="javascript:saluda();">
+    <form id="forma" action="javascript:saluda();">
       <!-- Encabezado de la página. -->
       <h1>Formulario</h1>
       <p>
@@ -50,19 +50,6 @@
       <footer>Copyright &copy; 2021 Ricardo Armando Machorro Reyes.</footer>
     </form>
     <!-- Incorpora el script controlador a la página. -->
-    <script>
-      //@ts-check Hace que VS Code analice el script.
-      /** Función que muestra un saludo. */
-      function saluda() {
-        /* Se evalúa la expresión "nombre.value" que está dentro del delimitador
-         * ${ }, para posteriormente sustituirlo dentro de la cadena.
-         * El resultado se deja en la variable "respuesta".
-         * EL TEXTO DE LA CADENA EMPIEZA Y TERMINA CON EL ACENTO INVERTIDO. */
-        // @ts-ignore ignora los errores de esta línea (no encuentra a nombre)
-        const respuesta = `Saludos a ${nombre.value}.`;
-        // Muestra la respuesta en un cuadro de diálogo de alerta.
-        alert(respuesta);
-      }
-    </script>
+    <script src="js/CtrlSaludo.js"></script>
   </body>
 </html>
