@@ -1,5 +1,7 @@
 "use strict"; 
 var forma = document.getElementById("forma");
+var nombre = forma["nombre"];
+forma.addEventListener(submit, saluda, false);
 function saluda() {
         /* Se evalúa la expresión "nombre.value" que está dentro del delimitador
          * ${ }, para posteriormente sustituirlo dentro de la cadena.
