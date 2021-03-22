@@ -1,68 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Formulario</title>
+    <title>Saludo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
   </head>
   <body>
-    <!-- Forma para procesar datos.
- 
-    action="javascript:saluda();
-    Acción que se ejecuta al activar la forma. "javascript:saluda();" indica
-    que se ejecuta una instrucción de JavaScript, que es invocar la función
-    "saluda()".
-    Una forma se activa cuando se cliquea o se presiona la tecla de espacio
-    sobre un element de type="submit" dentro de la forma, o cuando se teclea
-    enter con el foco en un componente de captura de texto que esté dentro de
-    la forma. -->
-    <form action="javascript:saluda();">
-      <!-- Encabezado de la página. -->
-      <h1>Formulario</h1>
-      <p>
-        <!-- Campo de captura de texto. Atributos:
-
-          type="text"
-          Indica que el campo input sirve para capturar texto en general.
-
-          id="nombre" 
-          nombre del campo de texto dentro de este documento.
-  
-          required
-          el campo debe tener caracteres antes de hacer submit; de lo contrario
-          se muestra un error y el submit se cancela.
-  
-          placeholder="Nombre"
-          Texto conocido como sello de agua. Cuando el elemento no tiene
-          caracteres, se muestra el valor de placeholder. Cuando sí tiene
-          caracteres, el sello de agua se quita y se pone el valor del elemento.
-        -->
-        <input type="text" id="nombre" required placeholder="Nombre">
-      </p>
-      <p>
-        <!-- botón con el texto "Saludar". Sirve para activar la forma.
- 
-        type="submit"
-        Indica que la activación del botón, activa la forma. -->
-        <button type="submit">Saludar</button>
-      </p>
-      <footer>Copyright &copy; 2021 Ricardo Armando Machorro Reyes.</footer>
-    </form>
-    <!-- Incorpora el script controlador a la página. -->
-    <script>
-      //@ts-check Hace que VS Code analice el script.
-      /** Función que muestra un saludo. */
-      function saluda() {
-        /* Se evalúa la expresión "nombre.value" que está dentro del delimitador
-         * ${ }, para posteriormente sustituirlo dentro de la cadena.
-         * El resultado se deja en la variable "respuesta".
-         * EL TEXTO DE LA CADENA EMPIEZA Y TERMINA CON EL ACENTO INVERTIDO. */
-        // @ts-ignore ignora los errores de esta línea (no encuentra a nombre)
-        const respuesta = `Saludos a ${nombre.value}.`;
-        // Muestra la respuesta en un cuadro de diálogo de alerta.
-        alert(respuesta);
-      }
-    </script>
+    <header>
+      <h1>Saludo</h1>
+    </header>
+    <section>
+      <form id="forma">
+        <p>
+          <label accesskey="1">
+            Nombre 1
+            <input name="nombre1" type="text">
+          </label>
+        </p>
+         <p>
+          <label accesskey="2">
+            Nombre 2
+            <input name="nombre2" type="text">
+          </label>
+        </p>
+        <p><output id="salida"></output></p>
+      </form>
+    </section>
+    <footer>
+      Copyright 2021 Yo
+    </footer>
+    <script src="js/CtrlSaludo.js"></script>
   </body>
 </html>
