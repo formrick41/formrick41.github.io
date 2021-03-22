@@ -1,15 +1,9 @@
-"use strict"; 
-var forma = document.getElementById("forma");
-var nombre = forma["nombre"];
-forma.addEventListener(submit, saluda, false);
-function saluda() {
-        /* Se evalúa la expresión "nombre.value" que está dentro del delimitador
-         * ${ }, para posteriormente sustituirlo dentro de la cadena.
-         * El resultado se deja en la variable "respuesta".
-         * EL TEXTO DE LA CADENA EMPIEZA Y TERMINA CON EL ACENTO INVERTIDO. */
-        // @ts-ignore ignora los errores de esta línea (no encuentra a nombre)
-        const respuesta = `Saludos a ${nombre.value}.`;
-        // Muestra la respuesta en un cuadro de diálogo de alerta.
-        alert(respuesta);
+"use strict";
+var forma = document.getElementById("forma"),
+    salida = document.getElementById("salida");
+forma.addEventListener("input", saluda, false);
+function saluda(){
+  var nombre1 = forma["nombre1"].value.trim(),
+      nombre2 = forma["nombre2"].value.trim();
+  salida.textContent = "Saludos a "+nombre1 + " y "+ nombre2;    
 }
-
