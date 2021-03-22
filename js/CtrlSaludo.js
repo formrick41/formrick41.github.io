@@ -9,5 +9,5 @@ function saluda() {
         const respuesta = `Saludos a ${nombre.value}.`;
         // Muestra la respuesta en un cuadro de diálogo de alerta.
         alert(respuesta);
-      }
 }
+
