@@ -70,7 +70,12 @@
           TEXTO: texto.value.trim(),
           // @ts-ignore
           TIMESTAMP: firebase.firestore.FieldValue.serverTimestamp()
-        });
+        }).then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+        })
+         .catch((error) => {
+         console.error("Error adding document: ", error);
+})
       }
       /** Muestra los mensaje almacenados en la collection "MENSAJE". Se
        * actualiza automáticamente. */
